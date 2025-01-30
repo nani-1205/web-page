@@ -11,6 +11,7 @@
             padding: 20px;
             background-color: #e3f2fd;
             background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
+            transition: background 1s ease-in-out;
         }
         .book-list {
             display: flex;
@@ -35,6 +36,25 @@
             border-radius: 5px;
         }
     </style>
+    <script>
+        const backgrounds = [
+            'https://www.transparenttextures.com/patterns/cubes.png',
+            'https://www.transparenttextures.com/patterns/wood-pattern.png',
+            'https://www.transparenttextures.com/patterns/diamond-upholstery.png',
+            'https://www.transparenttextures.com/patterns/dark-mosaic.png'
+        ];
+        
+        const colors = ['#e3f2fd', '#f8bbd0', '#c8e6c9', '#ffccbc'];
+        
+        function changeBackground() {
+            const body = document.body;
+            const randomIndex = Math.floor(Math.random() * backgrounds.length);
+            body.style.backgroundImage = `url('${backgrounds[randomIndex]}')`;
+            body.style.backgroundColor = colors[randomIndex];
+        }
+        
+        setInterval(changeBackground, 10000);
+    </script>
 </head>
 <body>
     <h1>Must Read Before You Die</h1>
@@ -66,14 +86,14 @@
             <img src="https://via.placeholder.com/150" alt="Book Cover">
             <h3>One Piece</h3>
             <p>by Eiichiro Oda</p>
-            <a href="https://www.goodreads.com/book/show/808182.One_Piece_Vol_01" target="_blank">Learn More</a>
+            <a href="https://www.goodreads.com/book/show/117509723-one-pice-coloring-book?ref=nav_sb_ss_1_8" target="_blank">Learn More</a>
         </div>
         
         <div class="book">
             <img src="https://via.placeholder.com/150" alt="Book Cover">
             <h3>Naruto</h3>
             <p>by Masashi Kishimoto</p>
-            <a href="https://www.goodreads.com/book/show/929" target="_blank">Learn More</a>
+            <a href="https://www.goodreads.com/book/show/204042.Naruto_Vol_1?ref=nav_sb_ss_1_6" target="_blank">Learn More</a>
         </div>
         
         <div class="book">
