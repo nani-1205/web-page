@@ -119,3 +119,124 @@
     </div>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Must Read Before You Die</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #e3f2fd;
+            background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
+            transition: background 1s ease-in-out;
+        }
+        .book-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .book {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 220px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .book:hover {
+            transform: scale(1.05);
+        }
+        .book img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+    </style>
+    <script>
+        const backgrounds = [
+            'https://www.transparenttextures.com/patterns/cubes.png',
+            'https://www.transparenttextures.com/patterns/wood-pattern.png',
+            'https://www.transparenttextures.com/patterns/diamond-upholstery.png',
+            'https://www.transparenttextures.com/patterns/dark-mosaic.png'
+        ];
+        
+        const colors = ['#e3f2fd', '#f8bbd0', '#c8e6c9', '#ffccbc'];
+        
+        function changeBackground() {
+            const body = document.body;
+            const randomIndex = Math.floor(Math.random() * backgrounds.length);
+            body.style.backgroundImage = `url('${backgrounds[randomIndex]}')`;
+            body.style.backgroundColor = colors[randomIndex];
+        }
+        
+        setInterval(changeBackground, 10000);
+    </script>
+</head>
+<body>
+    <h1>Must Read Before You Die</h1>
+    <p>Here are some of my favorite books that I highly recommend.</p>
+
+    <div class="book-list">
+        <div class="book">
+            <img src="https://via.placeholder.com/150" alt="Book Cover">
+            <h3>The Great Gatsby</h3>
+            <p>by F. Scott Fitzgerald</p>
+            <a href="https://www.goodreads.com/book/show/4671.The_Great_Gatsby" target="_blank">Learn More</a>
+        </div>
+
+        <div class="book">
+            <img src="https://via.placeholder.com/150" alt="Book Cover">
+            <h3>1984</h3>
+            <p>by George Orwell</p>
+            <a href="https://www.goodreads.com/book/show/40961427-1984" target="_blank">Learn More</a>
+        </div>
+
+        <div class="book">
+            <img src="https://via.placeholder.com/150" alt="Book Cover">
+            <h3>To Kill a Mockingbird</h3>
+            <p>by Harper Lee</p>
+            <a href="https://www.goodreads.com/book/show/2657.To_Kill_a_Mockingbird" target="_blank">Learn More</a>
+        </div>
+
+        <div class="book">
+            <img src="https://via.placeholder.com/150" alt="Book Cover">
+            <h3>One Piece</h3>
+            <p>by Eiichiro Oda</p>
+            <a href="https://www.goodreads.com/book/show/117509723-one-pice-coloring-book?ref=nav_sb_ss_1_8" target="_blank">Learn More</a>
+        </div>
+
+        <div class="book">
+            <img src="https://via.placeholder.com/150" alt="Book Cover">
+            <h3>Naruto</h3>
+            <p>by Masashi Kishimoto</p>
+            <a href="https://www.goodreads.com/book/show/204042.Naruto_Vol_1?ref=nav_sb_ss_1_6" target="_blank">Learn More</a>
+        </div>
+        
+        <div class="book">
+            <img src="https://via.placeholder.com/150" alt="Book Cover">
+            <h3>Attack on Titan</h3>
+            <p>by Hajime Isayama</p>
+            <a href="https://www.goodreads.com/book/show/13154150-attack-on-titan-vol-1" target="_blank">Learn More</a>
+        </div>
+        
+        <div class="book">
+            <img src="https://via.placeholder.com/150" alt="Book Cover">
+            <h3>Death Note</h3>
+            <p>by Tsugumi Ohba</p>
+            <a href="https://www.goodreads.com/book/show/13615.Death_Note_Vol_1" target="_blank">Learn More</a>
+        </div>
+        
+        <div class="book">
+            <img src="https://via.placeholder.com/150" alt="Book Cover">
+            <h3>Dragon Ball</h3>
+            <p>by Akira Toriyama</p>
+            <a href="https://www.goodreads.com/book/show/969275.Dragon_Ball_Vol_1?ref=nav_sb_ss_1_10" target="_blank">Learn More</a>
+        </div>
+    </div>
+</body>
+</html>
