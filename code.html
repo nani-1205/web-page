@@ -13,6 +13,11 @@
             background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
             transition: background 1s ease-in-out;
         }
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            transition: color 1s ease-in-out;
+        }
         .book-list {
             display: flex;
             flex-wrap: wrap;
@@ -45,12 +50,15 @@
         ];
         
         const colors = ['#e3f2fd', '#f8bbd0', '#c8e6c9', '#ffccbc'];
+        const titleColors = ['#ff5733', '#33ff57', '#3357ff', '#ff33a8'];
         
         function changeBackground() {
             const body = document.body;
+            const h1 = document.querySelector('h1');
             const randomIndex = Math.floor(Math.random() * backgrounds.length);
             body.style.backgroundImage = `url('${backgrounds[randomIndex]}')`;
             body.style.backgroundColor = colors[randomIndex];
+            h1.style.color = titleColors[randomIndex];
         }
         
         setInterval(changeBackground, 10000);
@@ -86,7 +94,7 @@
             <img src="https://via.placeholder.com/150" alt="Book Cover">
             <h3>One Piece</h3>
             <p>by Eiichiro Oda</p>
-            <a href="https://www.goodreads.com/book/show/117509723-one-pice-coloring-book?ref=nav_sb_ss_1_8" target="_blank">Learn More</a>
+            <a href="https://www.goodreads.com/book/show/808182.One_Piece_Vol_01" target="_blank">Learn More</a>
         </div>
         
         <div class="book">
@@ -114,7 +122,7 @@
             <img src="https://via.placeholder.com/150" alt="Book Cover">
             <h3>Dragon Ball</h3>
             <p>by Akira Toriyama</p>
-            <a href="https://www.goodreads.com/book/show/969275.Dragon_Ball_Vol_1?ref=nav_sb_ss_1_10" target="_blank">Learn More</a>
+            <a href="https://www.goodreads.com/book/show/288009.Dragon_Ball_Vol_1" target="_blank">Learn More</a>
         </div>
     </div>
 </body>
