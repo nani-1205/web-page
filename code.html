@@ -13,10 +13,30 @@
             background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
             transition: background 1s ease-in-out;
         }
-        h1 {
+        .title-box {
             text-align: center;
             font-size: 2.5em;
-            transition: color 1s ease-in-out;
+            padding: 20px;
+            border-radius: 10px;
+            transition: background-color 1s ease-in-out, color 1s ease-in-out;
+            display: inline-block;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+        .title-box::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(255,255,255,0.3) 10%, rgba(0,0,0,0) 70%);
+            animation: dropEffect 2s infinite alternate;
+        }
+        @keyframes dropEffect {
+            from { transform: translateY(-10px); opacity: 0.6; }
+            to { transform: translateY(10px); opacity: 1; }
         }
         .book-list {
             display: flex;
@@ -36,10 +56,6 @@
         .book:hover {
             transform: scale(1.05);
         }
-        .book img {
-            max-width: 100%;
-            border-radius: 5px;
-        }
     </style>
     <script>
         const backgrounds = [
@@ -51,75 +67,69 @@
         
         const colors = ['#e3f2fd', '#f8bbd0', '#c8e6c9', '#ffccbc'];
         const titleColors = ['#ff5733', '#33ff57', '#3357ff', '#ff33a8'];
+        const titleBgColors = ['#ffe0b2', '#d1c4e9', '#ffecb3', '#b2dfdb'];
         
         function changeBackground() {
             const body = document.body;
-            const h1 = document.querySelector('h1');
+            const titleBox = document.querySelector('.title-box');
             const randomIndex = Math.floor(Math.random() * backgrounds.length);
             body.style.backgroundImage = `url('${backgrounds[randomIndex]}')`;
             body.style.backgroundColor = colors[randomIndex];
-            h1.style.color = titleColors[randomIndex];
+            titleBox.style.color = titleColors[randomIndex];
+            titleBox.style.backgroundColor = titleBgColors[randomIndex];
         }
         
         setInterval(changeBackground, 10000);
     </script>
 </head>
 <body>
-    <h1>Must Read Before You Die</h1>
+    <div class="title-box">Must Read Before You Die</div>
     <p>Here are some of my favorite books that I highly recommend.</p>
     
     <div class="book-list">
         <div class="book">
-            <img src="https://via.placeholder.com/150" alt="Book Cover">
             <h3>The Great Gatsby</h3>
             <p>by F. Scott Fitzgerald</p>
             <a href="https://www.goodreads.com/book/show/4671.The_Great_Gatsby" target="_blank">Learn More</a>
         </div>
         
         <div class="book">
-            <img src="https://via.placeholder.com/150" alt="Book Cover">
             <h3>1984</h3>
             <p>by George Orwell</p>
             <a href="https://www.goodreads.com/book/show/40961427-1984" target="_blank">Learn More</a>
         </div>
         
         <div class="book">
-            <img src="https://via.placeholder.com/150" alt="Book Cover">
             <h3>To Kill a Mockingbird</h3>
             <p>by Harper Lee</p>
             <a href="https://www.goodreads.com/book/show/2657.To_Kill_a_Mockingbird" target="_blank">Learn More</a>
         </div>
         
         <div class="book">
-            <img src="https://via.placeholder.com/150" alt="Book Cover">
             <h3>One Piece</h3>
             <p>by Eiichiro Oda</p>
             <a href="https://www.goodreads.com/book/show/808182.One_Piece_Vol_01" target="_blank">Learn More</a>
         </div>
         
         <div class="book">
-            <img src="https://via.placeholder.com/150" alt="Book Cover">
             <h3>Naruto</h3>
             <p>by Masashi Kishimoto</p>
             <a href="https://www.goodreads.com/book/show/204042.Naruto_Vol_1?ref=nav_sb_ss_1_6" target="_blank">Learn More</a>
         </div>
         
         <div class="book">
-            <img src="https://via.placeholder.com/150" alt="Book Cover">
             <h3>Attack on Titan</h3>
             <p>by Hajime Isayama</p>
             <a href="https://www.goodreads.com/book/show/13154150-attack-on-titan-vol-1" target="_blank">Learn More</a>
         </div>
         
         <div class="book">
-            <img src="https://via.placeholder.com/150" alt="Book Cover">
             <h3>Death Note</h3>
             <p>by Tsugumi Ohba</p>
             <a href="https://www.goodreads.com/book/show/13615.Death_Note_Vol_1" target="_blank">Learn More</a>
         </div>
         
         <div class="book">
-            <img src="https://via.placeholder.com/150" alt="Book Cover">
             <h3>Dragon Ball</h3>
             <p>by Akira Toriyama</p>
             <a href="https://www.goodreads.com/book/show/288009.Dragon_Ball_Vol_1" target="_blank">Learn More</a>
